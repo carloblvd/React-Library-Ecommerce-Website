@@ -1,33 +1,34 @@
 import React from "react";
 import Logo from "../assets/Library.svg";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const Footer = () => {
   return (
     <footer>
       <div className="container">
         <div className="row row__column">
-          <a href="/">
+          <Link to="/">
             <figure className="footer__logo">
               <img className="footer__logo--img" src={Logo} alt="" />
             </figure>
-          </a>
+          </Link>
           <div className="footer__list">
-            <a href="/" className="footer__link">
+            <Link to="/" className="footer__link">
               <span className="link__hover-effect--white link__hover-effect">
                 Home
               </span>
-            </a>
+            </Link>
             <span className="footer__link  no-cursor">About</span>
-            <a href="/books" className="footer__link">
+            <Link to="/books" className="footer__link">
               <span className="link__hover-effect--white link__hover-effect">
                 Books
               </span>
-            </a>
-            <a href="/cart" className="footer__link">
+            </Link>
+            <Link to="/cart" className="footer__link">
               <span className="link__hover-effect--white link__hover-effect">
                 Cart
               </span>
-            </a>
+            </Link>
           </div>
           <div className="footer__copyright">Copyright &copy; 2023 Library</div>
         </div>
