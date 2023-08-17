@@ -84,6 +84,18 @@ button:active {
   border: none;
 }
 
+.click {
+  transition: all 300ms ease;
+}
+
+.click:hover {
+  transform: scale(1.1);
+}
+
+.click:active {
+  transform: scale(0.9);
+}
+
 .purple {
   color: #7342d6;
 }
@@ -106,7 +118,7 @@ button:active {
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
-  padding: 8px;
+
   color: #7342d6;
 }
 
@@ -115,10 +127,7 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.nav__link:hover {
-  text-decoration: underline;
+  position: relative;
 }
 
 .nav__link--primary {
@@ -137,7 +146,7 @@ button:active {
   color: #7342d6;
   font-size: 20px;
   position: relative;
-  margin-left: 8px;
+  margin-left: 16px;
 }
 
 .cart__length {
@@ -151,7 +160,7 @@ button:active {
   justify-content: center;
   border-radius: 50%;
   position: absolute;
-  bottom: 4px;
+  bottom: 0px;
   right: -4px;
   pointer-events: none;
 }
@@ -213,6 +222,33 @@ button:active {
   right: 20px;
   padding: 8px;
   color: white;
+}
+
+.link__hover-effect:after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  right: 0;
+  width: 0;
+  bottom: 0;
+  transition: all 200ms ease;
+}
+
+.link__hover-effect--white:after {
+  background-color: white;
+}
+
+.link__hover-effect--purple:after {
+  background-color: #7342d6;
+}
+
+.link__hover-effect:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.link__hover-effect:hover {
+  text-decoration: none;
 }
 
 /* 
@@ -483,7 +519,12 @@ footer {
 }
 
 .footer__link {
-  padding: 0 8px;
+  position: relative;
+  margin: 0 10px;
+}
+
+.footer__link:hover {
+  text-decoration: none;
 }
 
 /* 
@@ -597,6 +638,7 @@ select {
   color: #242424;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .book__selected--link {
