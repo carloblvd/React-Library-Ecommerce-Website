@@ -44,9 +44,9 @@ function App() {
     setCart(cart.filter((item) => +item.id !== +book.id));
   }
 
-  // useEffect(() => {
-  //   console.log(cart);
-  // }, [cart]);
+  useEffect(() => {
+    console.log(cart);
+  }, [cart]);
 
   return (
     <Router>

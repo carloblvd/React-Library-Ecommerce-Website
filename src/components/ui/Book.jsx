@@ -45,10 +45,10 @@ const Book = ({ book }) => {
         </>
       ) : (
         <>
-          <div className="book__img--skeleton"></div>
-          <div className="book__title--skeleton"></div>
-          <div className="book__rating--skeleton"></div>
-          <div className="book__price--skeleton"></div>
+          <div className="book__img--skeleton skeleton"></div>
+          <div className="book__title--skeleton skeleton"></div>
+          <div className="book__rating--skeleton skeleton"></div>
+          <div className="book__price--skeleton skeleton"></div>
         </>
       )}
     </div>
