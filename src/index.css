@@ -187,7 +187,17 @@ button:active {
   visibility: hidden;
   transition: all 300ms ease;
   opacity: 0;
-  transform: translate(100%);
+}
+
+@keyframes menuOpen {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .menu--open {
@@ -198,7 +208,7 @@ button:active {
 .menu--open .menu__backdrop {
   visibility: visible;
   opacity: 1;
-  transform: translate(0);
+  animation: menuOpen 300ms ease;
 }
 
 .menu__links {
@@ -842,7 +852,7 @@ select {
 /* SMALL PHONES, LARGE SMARTPHONES */
 @media (max-width: 550px) {
   .btn__menu {
-    display: block;
+    display: flex;
   }
 
   .nav__list {
