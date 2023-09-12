@@ -8,6 +8,7 @@ import { books } from "./Data";
 import BookInfo from "./pages/BookInfo";
 import Cart from "./pages/Cart";
 import { useEffect, useState } from "react";
+import ScrollToTop from "./components/ui/ScrollToTop";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -50,6 +51,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="app">
         <Nav cart={cart} />
         <Route path="/" exact component={Home} />
